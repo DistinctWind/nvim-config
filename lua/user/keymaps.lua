@@ -16,6 +16,9 @@ keymap("", " ", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Add Save shortcuts
+keymap("", "<C-s>", ":w<CR>", desc "[S]ave Current Buffer")
+
 -- Window Focus Movement
 keymap("n", "<C-h>", "<C-w>h", desc "Move to Left Window")
 keymap("n", "<C-j>", "<C-w>j", desc "Move to Down Window")
