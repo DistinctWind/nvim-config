@@ -16,6 +16,9 @@ keymap("", " ", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+keymap("n", "H", ":tabp<CR>", desc "Goto Previous Tab")
+keymap("n", "L", ":tabn<CR>", desc "Goto Previous Tab")
+
 -- Add Save shortcuts
 keymap("n", "<C-s>", ":w<CR>", desc "[S]ave Current Buffer")
 
