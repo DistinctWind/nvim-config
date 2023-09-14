@@ -3,8 +3,18 @@ return {
     branch = "0.1.x",
     dependencies = {
         "nvim-lua/plenary.nvim",
-        { 'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+        {
+            'nvim-telescope/telescope-fzf-native.nvim',
+            build = function(plugin)
+                vim.print(plugin)
+                local Process = require("lazy.manage.process")
+                if jit.arch == "Linux" then
+                    Process.exec("cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release", { cwd = plugin.dir })
+                else -- Then on Windows, we need to install it (moving it out from x64-ish dirs)
+                    Process.exec "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
+                end
+            end
+        }
     },
     config = function()
         local telescope = require("telescope")
