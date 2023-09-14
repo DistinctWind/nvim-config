@@ -17,7 +17,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Add Save shortcuts
-keymap("", "<C-s>", ":w<CR>", desc "[S]ave Current Buffer")
+keymap("n", "<C-s>", ":w<CR>", desc "[S]ave Current Buffer")
 
 -- Window Focus Movement
 keymap("n", "<C-h>", "<C-w>h", desc "Move to Left Window")
