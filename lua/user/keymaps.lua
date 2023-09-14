@@ -1,6 +1,6 @@
 local default_opts = { noremap = true, silent = true }
 
-local function desc(desc_string)
+function desc(desc_string)
     local opt = vim.deepcopy(default_opts)
     if desc_string then
        opt.desc = desc_string
