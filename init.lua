@@ -1,3 +1,3 @@
-require("user.options")
-require("user.keymaps")
-require("user.lazy")
+require("gorun.options")
+require("gorun.keymaps")
+require("gorun.lazy")

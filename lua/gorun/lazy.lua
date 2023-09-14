@@ -13,8 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { import = "user.plugins" },
-    { import = "user.plugins.lsp" },
+    { import = "gorun.plugins" },
+    { import = "gorun.plugins.lsp" },
 }, {
     checker = {
         enabled = true,
