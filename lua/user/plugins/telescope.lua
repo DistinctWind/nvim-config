@@ -6,12 +6,11 @@ return {
         {
             'nvim-telescope/telescope-fzf-native.nvim',
             build = function(plugin)
-                vim.print(plugin)
                 local Process = require("lazy.manage.process")
-                if jit.arch == "Linux" then
+                if jit.os == "Linux" then
                     Process.exec("cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release", { cwd = plugin.dir })
                 else -- Then on Windows, we need to install it (moving it out from x64-ish dirs)
-                    Process.exec "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
+                    Process.exec("cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build", { cwd = plugin.dir })
                 end
             end
         }
