@@ -26,6 +26,8 @@ return {
                     i = {
                         ["<C-k>"] = actions.move_selection_previous, -- move to prev result
                         ["<C-j>"] = actions.move_selection_next,
+                        ["<C-e>"] = actions.close,
+                        ["<Esc>"] = actions.close, -- Exit immediately when esc pressed
                     },
                 },
             },
@@ -39,5 +41,6 @@ return {
         keymap("n", "<leader>sh", builtin.help_tags, desc "[S]earch [H]elp")
         keymap("n", "<leader>sk", builtin.keymaps, desc "[S]earch [K]eymaps")
         keymap("n", "<leader><leader>", builtin.buffers, desc "Search Buffers")
+        keymap("n", "<leader>/", builtin.current_buffer_fuzzy_find, desc "Search Current File")
     end
 }
