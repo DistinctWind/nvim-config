@@ -1,7 +1,5 @@
 local M = {}
 
-M.available_lsps = nil
-
 function M.check_android()
     local result = vim.fn.system("uname -a")
     if vim.v.shell_error ~= 0 then -- Can't exec `uname`, not unix-like system
