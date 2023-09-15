@@ -6,6 +6,8 @@ return {
     config = function()
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
+        local settings = require("gorun.lsp_settings")
+        settings.setup()
 
         mason.setup {
             ui = {
@@ -18,9 +20,7 @@ return {
         }
 
         mason_lspconfig.setup {
-            ensure_installed = {
-                "lua_ls",
-            }
+            ensure_installed = settings.ensure_installed
         }
     end
 }

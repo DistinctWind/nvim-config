@@ -10,6 +10,8 @@ return {
         local lspconfig = require("lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local builtin = require("telescope.builtin")
+        local settings = require("gorun.lsp_settings")
+        settings.setup()
         require("neodev").setup()
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -24,21 +26,12 @@ return {
             keymap("n", "gd", builtin.lsp_definitions, desc "[G]oto [D]efinitions")
         end
 
-        lspconfig["lua_ls"].setup {
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = {
-                Lua = {
-                    runtime = {
-                        -- Tell the language server which version of Lua you're using
-                        -- (most likely LuaJIT in the case of Neovim)
-                        version = 'LuaJIT'
-                    },
-                    workspace = {
-                        checkThirdParty = false,
-                    }
-                }
+        for server_name, config in pairs(settings.lsp_settings) do
+            lspconfig[server_name].setup {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = config,
             }
-        }
+        end
     end
 }
