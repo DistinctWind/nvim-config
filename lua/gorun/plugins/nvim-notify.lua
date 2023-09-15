@@ -4,7 +4,8 @@ return {
         local notify = require("notify")
         notify.setup {
             stages = "slide",
-            timeout = 3000
+            timeout = 5000,
+            max_width = 30,
         }
         vim.notify = notify
     end
