@@ -11,7 +11,8 @@ return {
             leap.leap{ target_windows = { vim.fn.win_getid() } }
         end, desc "[J]ump")
         keymap("n", "<leader>J", function()
-            leap.leap{ target_windows = require('leap.util').get_enterable_windows() }
+            local windows = require("leap.util").get_enterable_windows()
+            table.insert(windows, vim.fn.win_getid())
+            leap.leap{ target_windows = windows }
         end, desc "[J]ump All Windows")
-    end
-}
+    end }
