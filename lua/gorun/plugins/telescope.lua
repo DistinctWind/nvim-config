@@ -35,11 +35,12 @@ return {
         }
 
         telescope.load_extension("fzf")
-        
+
         local keymap = vim.keymap.set
         keymap("n", "<leader>sf", builtin.find_files, desc "[S]earch [F]iles")
         keymap("n", "<leader>sh", builtin.help_tags, desc "[S]earch [H]elp")
         keymap("n", "<leader>sk", builtin.keymaps, desc "[S]earch [K]eymaps")
+        keymap("n", "<leader>lg", builtin.live_grep, desc "[L]ive [G]rep")
         keymap("n", "<leader><leader>", builtin.buffers, desc "Search Buffers")
         keymap("n", "<leader>/", builtin.current_buffer_fuzzy_find, desc "Search Current File")
     end

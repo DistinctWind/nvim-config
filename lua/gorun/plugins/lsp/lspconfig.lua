@@ -22,8 +22,11 @@ return {
                 opts.buffer = bufnr
                 return opts
             end
-            keymap("n", "gr", builtin.lsp_references, desc "[G]oto [R]eference")
-            keymap("n", "gd", builtin.lsp_definitions, desc "[G]oto [D]efinitions")
+            keymap("n", "<leader>gr", builtin.lsp_references, desc "[G]oto [R]eference")
+            keymap("n", "<leader>gd", builtin.lsp_definitions, desc "[G]oto [D]efinitions")
+            keymap("n", "<leader>gi", builtin.lsp_implementations, desc "[G]oto [I]mplementations")
+            keymap("n", "<leader>gt", builtin.treesitter, desc "[G]oto [T]reesitter")
+            keymap("n", "<leader>gws", builtin.lsp_workspace_symbols, desc "[G]oto [W]orkspace [S]ymbols")
         end
 
         for server_name, config in pairs(settings.lsp_settings) do

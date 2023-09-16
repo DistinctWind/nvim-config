@@ -16,8 +16,10 @@ keymap("", " ", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-keymap("n", "H", ":tabp<CR>", desc "Goto Previous Tab")
-keymap("n", "L", ":tabn<CR>", desc "Goto Previous Tab")
+keymap("n", "H", ":bprev<CR>", desc "Goto Previous Tab")
+keymap("n", "L", ":bnext<CR>", desc "Goto Next Tab")
+keymap("n", "<M-h>", ":tabprevious<CR>", desc "Goto Previous Tab")
+keymap("n", "<M-l>", ":tabnext<CR>", desc "Goto Next Tab")
 
 -- Add Save shortcuts
 keymap("n", "<C-s>", ":w<CR>", desc "[S]ave Current Buffer")
@@ -44,8 +46,8 @@ keymap("v", "<", "<gv", desc "Remove Indent")
 keymap("v", ">", ">gv", desc "Add Indent")
 
 -- Note: "==" for reindent
-keymap("v", "<A-j>", ":move .+1<CR>==", desc "Grab and Move Down")
-keymap("v", "<A-k>", ":move .-1<CR>==", desc "Grab and Move Up")
+keymap("v", "<A-j>", ":move .+1<CR>==gv", desc "Grab and Move Down")
+keymap("v", "<A-k>", ":move .-1<CR>==gv", desc "Grab and Move Up")
 keymap("v", "p", '"_dP', desc "Content Keeping Replace")
 
 -- Terminal Focus Movement
