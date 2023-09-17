@@ -13,7 +13,7 @@ end
 
 -- Set the language server that use VM to run
 -- Which could run in even android system
-M.ensure_installed = {}
+M.ensure_installed = { 'cmake' }
 
 M.setup_finished = false
 
@@ -50,6 +50,7 @@ M.lsp_settings = {
         }
     },
     clangd = { },
+    cmake = { },
 }
 
 return M
