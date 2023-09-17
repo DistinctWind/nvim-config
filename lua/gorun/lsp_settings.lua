@@ -13,7 +13,7 @@ end
 
 -- Set the language server that use VM to run
 -- Which could run in even android system
-M.ensure_installed = { 'cmake' }
+M.ensure_installed = { 'cmake', 'pyright' }
 
 M.setup_finished = false
 
@@ -51,6 +51,7 @@ M.lsp_settings = {
     },
     clangd = { },
     cmake = { },
+    pyright = { },
 }
 
 return M
