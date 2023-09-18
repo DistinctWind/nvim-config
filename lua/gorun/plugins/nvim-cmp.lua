@@ -28,7 +28,8 @@ return {
                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-f>"] = cmp.mapping.scroll_docs(4),
                 ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-                ["<C-Space>"] = cmp.mapping.complete(),
+                ["<C-Space>"] = cmp.mapping.complete(), -- seems not work on android
+                ["<M-Space>"] = cmp.mapping.complete(),
                 ["<CR>"] = function(fallback)
                     if cmp.visible() then
                         cmp.confirm { select = false }
