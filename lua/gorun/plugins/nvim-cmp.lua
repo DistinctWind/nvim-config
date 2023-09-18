@@ -32,9 +32,8 @@ return {
                 ["<CR>"] = function(fallback)
                     if cmp.visible() then
                         cmp.confirm { select = false }
-                    else
-                        fallback()
                     end
+                    fallback()
                 end,
                 ["<Tab>"] = cmp.mapping(function (fallback)
                     if cmp.visible() then
