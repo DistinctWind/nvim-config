@@ -46,8 +46,6 @@ keymap("v", "<", "<gv", desc "Remove Indent")
 keymap("v", ">", ">gv", desc "Add Indent")
 
 -- Note: "==" for reindent
-keymap("v", "<A-j>", ":move .+1<CR>==gv", desc "Grab and Move Down")
-keymap("v", "<A-k>", ":move .-2<CR>==gv", desc "Grab and Move Up")
 keymap("v", "p", '"_dP', desc "Content Keeping Replace")
 
 -- Terminal Focus Movement
