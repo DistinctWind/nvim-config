@@ -39,7 +39,7 @@ return {
                 content = {
                     { " [S]earch [F]ile", "Telescope find_files", "sf" },
                     { " [S]earch [W]ord", "Telescope live_grep", "sw" },
-                    { " [S]elect [C]olorscheme", "Telescope colorscheme", "sc" },
+                    { " [S]elect [C]olorscheme", "Telescope colorscheme enable_preview=true", "sc" },
                     { " [G]it [B]ranch", "Telescope git_branches", "gb"},
                     { " [E]dit [C]onfig", beautify_lua_cmd [[lua do
                         vim.fn.chdir(vim.fn.stdpath("config"))
