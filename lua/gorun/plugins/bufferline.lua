@@ -14,6 +14,12 @@ return {
                     separator = true
                 }
             },
+            -- custom_filter = function(bufnr)
+            --     if vim.bo[bufnr].filetype:match("cmake_") then
+            --         return false
+            --     end
+            --     return true
+            -- end
         },
     },
 }
