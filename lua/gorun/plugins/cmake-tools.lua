@@ -68,5 +68,12 @@ return {
         }
 
         local keymap = vim.keymap.set
+        keymap("n", "<leader>cg", ":CMakeGenerate<CR>", desc "[C]make [G]enerate")
+        keymap("n", "<leader>cb", ":CMakeBuild<CR>", desc "[C]make [B]uild")
+        keymap("n", "<leader>cr", ":CMakeRun<CR>", desc "[C]make [R]un")
+        -- keymap("n", "<M-F10>", ":CMakeRun<CR>", desc "CMake Run")
+        keymap("n", "<M-0>", ":CMakeRun<CR>", desc "CMake Run")
+        keymap("n", "<M-s>r", ":CMakeSelectLaunchTarget<CR>", desc "Select CMake [R]un Preset")
+        keymap("n", "<M-s>b", ":CMakeSelectBuildTarget<CR>", desc "Select CMake [B]uild Target")
     end
 }
