@@ -1,5 +1,6 @@
 return {
     "Civitasv/cmake-tools.nvim",
+    event = "User GorunCMakeProject",
     config = function ()
         local cmake_tools = require("cmake-tools")
         local desc = require("gorun.keymaps").desc
