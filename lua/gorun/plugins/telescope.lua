@@ -28,10 +28,10 @@ return {
                         ["<C-j>"] = actions.move_selection_next,
                         ["<C-e>"] = actions.close,
                         ["<Esc>"] = actions.close, -- Exit immediately when esc pressed
+                        ["<M-CR>"] = actions.select_vertical,
                     },
                 },
             },
-
         }
 
         telescope.load_extension("fzf")
