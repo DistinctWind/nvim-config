@@ -2,6 +2,7 @@ return {
     "Civitasv/cmake-tools.nvim",
     config = function ()
         local cmake_tools = require("cmake-tools")
+        local desc = require("gorun.keymaps").desc
         cmake_tools.setup {
             cmake_command = "cmake", -- this is used to specify cmake command path
             cmake_regenerate_on_save = true, -- auto generate when save CMakeLists.txt

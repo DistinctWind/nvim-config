@@ -1,3 +1,3 @@
 require("gorun.options")
-require("gorun.keymaps")
+require("gorun.keymaps").init_keymap()
 require("gorun.lazy")

@@ -4,6 +4,7 @@ return {
     event = "VeryLazy",
     config = function ()
         local tree = require("nvim-tree")
+        local desc = require("gorun.keymaps").desc
         tree.setup({
             view = {
                 width = 30,

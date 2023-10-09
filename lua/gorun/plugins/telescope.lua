@@ -19,6 +19,7 @@ return {
         local telescope = require("telescope")
         local actions = require("telescope.actions")
         local builtin = require("telescope.builtin")
+        local desc = require("gorun.keymaps").desc
 
         telescope.setup {
             defaults = {

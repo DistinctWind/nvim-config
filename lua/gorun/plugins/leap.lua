@@ -7,6 +7,8 @@ return {
     config = function ()
         local keymap = vim.keymap.set
         local leap = require("leap")
+        local desc = require("gorun.keymaps").desc
+
         local function jump_current_window()
             leap.leap{ target_windows = { vim.fn.win_getid() } }
         end
