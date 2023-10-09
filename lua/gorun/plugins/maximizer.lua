@@ -1,4 +1,5 @@
 return {
+    event = "VeryLazy",
     "szw/vim-maximizer",
     config = function ()
         local keymap = vim.keymap.set
