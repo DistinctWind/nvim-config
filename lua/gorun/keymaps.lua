@@ -23,9 +23,6 @@ function M.init_keymap()
     keymap("n", "<M-h>", ":tabprevious<CR>", desc "Goto Previous Tab")
     keymap("n", "<M-l>", ":tabnext<CR>", desc "Goto Next Tab")
 
-    -- Add Save shortcuts
-    keymap("n", "<C-s>", ":w<CR>", desc "[S]ave Current Buffer")
-
     -- Window Focus Movement
     keymap("n", "<C-h>", "<C-w>h", desc "Move to Left Window")
     keymap("n", "<C-j>", "<C-w>j", desc "Move to Down Window")
