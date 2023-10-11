@@ -38,8 +38,8 @@ function M.init_keymap()
     -- Window Resizing
     keymap("n", "<C-Up>", ":resize +2<CR>", desc "Bigger Window")
     keymap("n", "<C-Down>", ":resize -2<CR>", desc "Smaller Window")
-    keymap("n", "<C-Left>", ":resize -2<CR>", desc "Smaller Window")
-    keymap("n", "<C-Right>", ":resize +2<CR>", desc "Bigger Window")
+    keymap("n", "<C-Left>", ":vertical resize -2<CR>", desc "Smaller Window")
+    keymap("n", "<C-Right>", ":vertical resize +2<CR>", desc "Bigger Window")
 
     keymap("i", "jk", "<ESC>", desc "Quick Escape")
 
