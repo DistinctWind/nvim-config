@@ -12,7 +12,19 @@ return {
             indent = { enable = true },
             ignore_install = {},
             auto_install = true,
-            modules = {}
+            modules = {},
+            textobjects = {
+                select = {
+                    enable = true,
+                    lookahead = true,
+                    keymaps = {
+                        ["af"] = "@function.outer",
+                        ["if"] = "@function.inner",
+                        ["aa"] = "@parameter.outer",
+                        ["ia"] = "@parameter.inner",
+                    },
+                },
+            }
         })
     end
 }
