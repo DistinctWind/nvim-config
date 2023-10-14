@@ -29,9 +29,6 @@ function M.init_keymap()
     keymap("n", "<C-k>", "<C-w>k", desc "Move to Up Window")
     keymap("n", "<C-l>", "<C-w>l", desc "Move to Left Window")
 
-    -- Open Explorer
-    keymap("n", "<leader>e", ":Lex 30<CR>", desc "Open [E]xplorer")
-
     -- Window Resizing
     keymap("n", "<C-Up>", ":resize +2<CR>", desc "Bigger Window")
     keymap("n", "<C-Down>", ":resize -2<CR>", desc "Smaller Window")
