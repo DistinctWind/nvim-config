@@ -36,6 +36,8 @@ function M.init_keymap()
     keymap("n", "<C-Right>", ":vertical resize +2<CR>", desc "Bigger Window")
 
     keymap("i", "jk", "<ESC>", desc "Quick Escape")
+    keymap("i", "<S-CR>", "<ESC>o", desc "Edit Next New Line")
+    keymap("i", "<M-CR>", "<ESC>o", desc "Edit Next New Line")
 
     -- Unify Indent
     keymap("v", "<", "<gv", desc "Remove Indent")
