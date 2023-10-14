@@ -10,7 +10,7 @@ return {
                 width = 30,
             },
         })
-        vim.keymap.set("n", "<leader>E", ":NvimTreeToggle<CR>", desc "Toogle [E]xplorer")
-        vim.keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>", desc "Focus [E]xplorer")
+        vim.keymap.set("n", "<leader>ee", ":NvimTreeFocus<CR>", desc "[E]xplorer")
+        vim.keymap.set("n", "<leader>ec", ":NvimTreeClose<CR>", desc "[E]xplorer [C]lose")
     end
 }
