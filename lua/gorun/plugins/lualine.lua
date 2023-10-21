@@ -4,6 +4,7 @@ return {
     event = "VeryLazy",
     config = function()
         local lualine = require("lualine")
+        local pde_settings = require("gorun.pde.lualine")
         lualine.setup {
             options = {
                 icons_enabled = true,
@@ -25,7 +26,7 @@ return {
                     winbar = 1000,
                 }
             },
-            sections = require("gorun.pde.lualine").get_sections(),
+            sections = pde_settings.get_sections(),
             inactive_sections = {
                 lualine_a = {},
                 lualine_b = {},
