@@ -25,20 +25,7 @@ return {
                     winbar = 1000,
                 }
             },
-            sections = {
-                lualine_a = {'mode'},
-                lualine_b = {'branch'},
-                lualine_c = {'filename'},
-                lualine_x = {'encoding', 'filetype'},
-                lualine_y = {},
-                lualine_z = {
-                    {
-                        "location",
-                        icons_enabled = true,
-                        icon = ""
-                    },
-                }
-            },
+            sections = require("gorun.pde.lualine").get_sections(),
             inactive_sections = {
                 lualine_a = {},
                 lualine_b = {},
