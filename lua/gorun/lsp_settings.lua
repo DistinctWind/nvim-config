@@ -29,7 +29,8 @@ function M.setup()
     end
     local install_from_mason = {
         "lua_ls",
-        "clangd"
+        "clangd",
+        "zls",
     }
     for _, server_name in pairs(install_from_mason) do
         table.insert(M.ensure_installed, server_name)
@@ -53,6 +54,7 @@ M.lsp_settings = {
     cmake = { },
     pyright = { },
     gopls = { },
+    zls = { },
 }
 
 return M
