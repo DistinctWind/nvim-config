@@ -46,3 +46,12 @@ vim.cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 
 -- use utf-8 for  language locale
 os.setlocale(".utf-8")
+
+vim.o.guifont = "JetBrainsMono Nerd Font"
+
+if vim.g.neovide then
+    vim.g.neovide_refresh_rate = 60
+    vim.g.neovide_cursor_vfx_mode = "pixiedust"
+    vim.g.neovide_cursor_vfx_opacity = 200.0
+    vim.g.neovide_cursor_vfx_particle_density = 50.0
+end
