@@ -52,6 +52,7 @@ M.lsp_settings = {
     },
     clangd = { },
     cmake = { },
+    hls = { },
     pyright = { },
     gopls = { },
     zls = { },
